@@ -3,3 +3,4 @@
 node_modules
 comandos_git.txt
 .env
+.env.development
