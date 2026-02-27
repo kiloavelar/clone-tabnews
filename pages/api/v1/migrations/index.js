@@ -27,7 +27,8 @@ export default async function migrations(req, res) {
       return res.status(201).json(migratedMigrations);
     }
     return res.status(200).json(migratedMigrations);
-  } else {
+  } else if (req.method !== "GET" && req.method !== "POST") {
+    await dbClient.end();
     return res.status(405).json({ error: "Method not allowed" });
   }
 }
