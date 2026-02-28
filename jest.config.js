@@ -11,6 +11,8 @@ const jestConfig = createJestConfig({
   moduleDirectories: ["node_modules", "<rootDir>"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   verbose: true,
+  setupFilesAfterEnv: ["<rootDir>/tests/orchestrator.js"],
+  testTimeout: 60000,
 });
 
 module.exports = jestConfig;

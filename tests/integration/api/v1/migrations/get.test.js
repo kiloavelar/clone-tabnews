@@ -1,9 +1,8 @@
 import database from "infra/database";
 
-beforeAll(cleanDatabase);
-async function cleanDatabase() {
+beforeAll(async () => {
   await database.query("DROP SCHEMA public CASCADE; CREATE SCHEMA public;");
-}
+});
 
 test("GET /api/v1/migrations retorna status 200", async () => {
   const response = await fetch("http://localhost:3000/api/v1/migrations");
