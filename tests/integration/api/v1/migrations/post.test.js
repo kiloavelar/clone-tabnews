@@ -1,3 +1,9 @@
+import database from "infra/database";
+
+beforeAll(async () => {
+  await database.query("DROP SCHEMA public CASCADE; CREATE SCHEMA public;");
+});
+
 test("POST /api/v1/migrations retorna status 200 e 201", async () => {
   const response1 = await fetch("http://localhost:3000/api/v1/migrations", {
     method: "POST",
