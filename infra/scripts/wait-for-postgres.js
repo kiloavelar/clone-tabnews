@@ -12,8 +12,8 @@ function checkPostgres() {
       setTimeout(checkPostgres, 1000);
       return;
     }
-    console.log("\n\n😎  Postgres is ready!\n");
+    console.log("\n\n😎  Postgres está pronto!\n");
   }
 }
-process.stdout.write("\n🤡  Waiting for Postgres to be ready...");
+process.stdout.write("\n🤡  Aguardando a conexão com o Postgres");
 checkPostgres();
