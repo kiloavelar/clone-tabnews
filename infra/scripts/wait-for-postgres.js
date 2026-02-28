@@ -9,7 +9,7 @@ function checkPostgres() {
     // console.log("error: ", error);
     if (stdout.search("accepting connections") === -1) {
       process.stdout.write(".");
-      setTimeout(checkPostgres, 1000);
+      setTimeout(checkPostgres, 500);
       return;
     }
     console.log("\n\n😎  Postgres está pronto!\n");
