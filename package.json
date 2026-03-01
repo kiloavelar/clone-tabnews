@@ -10,7 +10,7 @@
     "docker:stop": "docker compose -f infra/compose.yaml stop",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
-    "test": "npm run docker:down && npm run docker:up && concurrently -n next,jest --hide next -k -s command-jest --kill-others 'next dev' 'jest --runInBand'",
+    "test": "npm run docker:down && npm run docker:up && concurrently -n next,jest --hide next -k -s command-jest --kill-others \"next dev\" \"jest --runInBand\" --verbose",
     "test:watch": "jest --watchAll --runInBand",
     "migration:create": "node-pg-migrate --migrations-dir infra/migrations create",
     "migration:up": "node-pg-migrate --migrations-dir infra/migrations --envPath .env.development up",

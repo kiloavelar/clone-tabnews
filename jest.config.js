@@ -12,7 +12,7 @@ const jestConfig = createJestConfig({
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   verbose: true,
   setupFilesAfterEnv: ["<rootDir>/tests/jest.setup.js"],
-  testTimeout: 60000,
+  testTimeout: 30000,
 });
 
 module.exports = jestConfig;
